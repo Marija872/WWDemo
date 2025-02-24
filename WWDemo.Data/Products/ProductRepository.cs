@@ -21,6 +21,10 @@ namespace WWDemo.Data.Products
         {
             return GetQueryable().FirstOrDefaultAsync(x => x!.Id == productId);
         }
+        public Task<Product?> GetProductBySerialNumber(Guid productId)
+        {
+            return GetQueryable().FirstOrDefaultAsync(x => x!.Id == productId);
+        }
 
         public async Task<Product?> AddProduct(Product product)
         {
